@@ -1,10 +1,10 @@
-import { PrimerParcialPage } from './app.po';
+import { TempPage } from './app.po';
 
-describe('primer-parcial App', () => {
-  let page: PrimerParcialPage;
+describe('temp App', () => {
+  let page: TempPage;
 
   beforeEach(() => {
-    page = new PrimerParcialPage();
+    page = new TempPage();
   });
 
   it('should display message saying app works', () => {
