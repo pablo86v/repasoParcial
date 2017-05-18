@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     Ng2SmartTableModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
   
 })

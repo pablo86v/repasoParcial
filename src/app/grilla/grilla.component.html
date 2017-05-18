@@ -1,3 +1,36 @@
-<p>
-  <ng2-smart-table [settings]="settings"></ng2-smart-table>
-</p>
+<!--<p>
+  <ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+</p>-->
+
+
+
+<div *ngFor= "let persona of listaPersonas">
+  <table>
+    <tr [ngStyle]="{'background-color' : getColorBySex(persona.sexo)}">
+      
+      <td style="width:20%">{{persona.nombre}}</td>
+      <td style="width:20%">{{persona.nombre}}</td>
+      <td style="width:20%">{{persona.apellido}}</td>
+      <td style="width:20%">{{persona.dni}}</td>
+      <td style="width:20%">{{persona.sexo}}</td>
+
+
+      <td style="width:20%">
+        <div *ngIf="persona.foto == ''" >
+          <img [src]="'assets/fotos/pordefecto.png'" class="img-thumbnail img-fluid">
+        </div>
+        <div *ngIf="persona.foto != ''" >
+          <img [src]="'assets/fotos/'+persona.foto"  class="img-thumbnail img-fluid">
+        </div>
+      </td>
+  
+      <button>Modificar</button>
+      <button (click)=eliminarPersona(persona.id)>Eliminar</button>
+    </tr>
+  </table>
+
+</div>
+
+
+
+
